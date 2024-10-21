@@ -1,0 +1,1 @@
+import { linkDownload } from '../src'

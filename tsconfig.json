@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "declaration": true, // 生成 .d.ts 文件
+    "outDir": "./dist", // 输出目录
+    "strict": true,
+    "moduleResolution": "node", // 确保解析 CommonJS 和 ESM
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "removeComments": false,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts"], // 指定包含的文件
+  "exclude": ["node_modules"]
+}

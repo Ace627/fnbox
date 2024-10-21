@@ -1,0 +1,32 @@
+{
+  "name": "fnbox",
+  "version": "1.0.0",
+  "description": "",
+  "author": "当时只道是寻常",
+  "type": "module",
+  "module": "dist/fnbox.es.js",
+  "types": "dist/fnbox.es.d.ts",
+  "packageManager": "pnpm@9.9.0",
+  "license": "ISC",
+  "scripts": {
+    "build": "vite build",
+    "test": "esno scripts/index.test.ts",
+    "generate-index": "esno scripts/generate-index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.7",
+    "esno": "^4.8.0",
+    "vite": "^5.4.9",
+    "vite-plugin-dts": "^4.2.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "TypeScript",
+    "Validate"
+  ]
+}
