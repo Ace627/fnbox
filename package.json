@@ -22,6 +22,10 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
+  "bugs": {
+    "url": "https://github.com/Ace627/fnbox.git/issues",
+    "email": "1207588603@qq.com"
+  },
   "files": [
     "dist"
   ],
