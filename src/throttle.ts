@@ -1,5 +1,5 @@
-/** 任意类型的 Function */
-type AnyFunction = (...args: any[]) => any
+import type { AnyFunction } from '#/global'
+
 /** 表示节流后的函数类型 */
 type ThrottledFunction<T extends AnyFunction> = T
 

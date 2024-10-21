@@ -11,6 +11,14 @@ export default defineConfig({
       insertTypesEntry: true, // 会在编译后的目录下生成一个入口 index.d.ts 文件，便于用户引用类型声明
     }),
   ],
+  resolve: {
+    alias: [
+      /** 设置 `@` 指向 `src` 目录 */
+      { find: '@', replacement: pathResolve('src') },
+      /** 设置 `#` 指向 `types` 目录 */
+      { find: '#', replacement: pathResolve('types') },
+    ],
+  },
   build: {
     lib: {
       entry: pathResolve('src/index.ts'), // 库的入口文件

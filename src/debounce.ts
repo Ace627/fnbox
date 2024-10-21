@@ -1,5 +1,5 @@
-/** 任意类型的 Function */
-type AnyFunction = (...args: any[]) => any
+import type { AnyFunction } from '#/global'
+
 /** 表示防抖后的函数类型 */
 type DebouncedFunction<T extends AnyFunction> = (...args: Parameters<T>) => ReturnType<T>
 
