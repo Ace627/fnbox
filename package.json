@@ -1,7 +1,7 @@
 {
   "name": "fnbox",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "前端开发的常用工具集",
   "author": "当时只道是寻常",
   "type": "module",
   "module": "dist/fnbox.es.js",
@@ -22,6 +22,10 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Ace627/fnbox.git"
+  },
   "bugs": {
     "url": "https://github.com/Ace627/fnbox.git/issues",
     "email": "1207588603@qq.com"
@@ -31,6 +35,7 @@
   ],
   "keywords": [
     "TypeScript",
-    "Validate"
+    "Validate",
+    "Download"
   ]
 }
