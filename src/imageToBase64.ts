@@ -1,20 +1,9 @@
 import { isBrowser } from './isBrowser'
 
-/**
- * 将指定 URL 的图片转换为 Base64 编码的字符串
- * @param {string} imgURL - 图片的 URL 地址
- * @param {number} [quality=0.9] - 图片质量，范围在 0 到 1 之间，默认值为 0.9
- * @returns {Promise<string>} - 返回一个 Promise，解析为 Base64 编码的字符串
- * @throws {Error} - 如果在非浏览器环境中调用此函数，将抛出错误
- *
- * @example
- * imageToBase64('https://example.com/image.png').then(base64 => console.log('Base64 String:', base64))
- */
+/** 将指定 URL 的图片转换为 Base64 编码的字符串 */
 export function imageToBase64(imgURL: string, quality = 0.9): Promise<string> {
-  // 判断当前是否为浏览器环境
   if (!isBrowser()) throw new Error('此方法仅支持在浏览器环境运行')
 
-  // 校验质量输入范围
   if (quality < 0 || quality > 1) throw new Error(`图片质量范围在 0 到 1 之间`)
 
   const img = new Image()
