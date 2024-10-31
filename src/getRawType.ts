@@ -9,3 +9,7 @@ import type { VariableType } from '#/global'
 export function getRawType(value: any): VariableType {
   return Object.prototype.toString.call(value).split(' ')[1].replace(']', '').toLowerCase() as VariableType
 }
+
+console.log(getRawType(null))
+console.log(getRawType(undefined))
+console.log(getRawType(NaN))

@@ -1,13 +1,21 @@
-/** 对引用数据类型进行深度克隆 */
+/**
+ * 深拷贝给定的值，包括对象、数组、日期和正则表达式对象
+ *
+ * @template T
+ * @param {T} source - 要深拷贝的值
+ * @returns {T} - 返回深拷贝的值
+ */
 export function cloneDeep<T extends any>(source: T): T {
-  // 检查是否为 null 或 undefined
   if (source === null || source === undefined) {
     return source
   }
 
-  // 检查是否为日期对象
   if (source instanceof Date) {
     return new Date(source.getTime()) as T
+  }
+
+  if (source instanceof RegExp) {
+    return new RegExp(source.source, source.flags) as T
   }
 
   // 检查是否为数组

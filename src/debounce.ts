@@ -1,9 +1,16 @@
 import type { AnyFunction } from '#/global'
 
-/** 表示防抖后的函数类型 */
 type DebouncedFunction<T extends AnyFunction> = (...args: Parameters<T>) => ReturnType<T>
 
-/** 对函数进行防抖处理 */
+/**
+ * 创建防抖函数，在指定的延迟时间后执行回调。如果立即执行选项为 `true`，则在延迟时间前立即执行一次。
+ *
+ * @template T - 回调函数的类型
+ * @param {T} callback - 需要防抖的回调函数
+ * @param {number} delay - 延迟时间（毫秒）
+ * @param {boolean} [immediate=false] - 是否立即执行
+ * @returns {DebouncedFunction<T>} - 防抖后的函数
+ */
 export function debounce<T extends AnyFunction>(callback: T, delay: number, immediate = false) {
   // 通过闭包缓存一个定时器 id
   let timer: NodeJS.Timeout | null
