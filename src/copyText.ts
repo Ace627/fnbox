@@ -1,6 +1,12 @@
 import { isBrowser } from './isBrowser'
 
-/** 将指定内容复制到剪贴板，支持 string、number 和对象等类型 */
+/**
+ * 复制文本到剪贴板
+ *
+ * @param {string | number | object} value - 要复制的文本，可以是字符串、数字或对象
+ * @returns {Promise<void>} - 返回一个 Promise，表示复制操作的结果
+ * @throws {Error} - 如果在非浏览器环境中调用此方法，将抛出错误；如果传入的参数类型不被支持，也将抛出错误
+ */
 export async function copyText(value: string | number | object): Promise<void> {
   if (!isBrowser()) throw new Error('此方法仅支持在浏览器环境运行')
 
