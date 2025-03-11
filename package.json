@@ -1,33 +1,43 @@
 {
   "name": "fnbox",
   "version": "1.0.5",
-  "description": "前端开发的常用工具集",
-  "author": "当时只道是寻常",
+  "description": "一个轻量级 TypeScript 工具库，涵盖常用前端开发函数",
   "type": "module",
+  "main": "dist/fnbox.cjs.js",
   "module": "dist/fnbox.es.js",
   "types": "dist/fnbox.es.d.ts",
   "packageManager": "pnpm@9.9.0",
   "license": "ISC",
   "scripts": {
-    "build": "vite build",
-    "test": "esno scripts/index.test.ts",
-    "generate-index": "esno scripts/generate-index.ts"
+    "prebuild": "esno scripts/prebuild.ts",
+    "build": "vite build"
   },
   "devDependencies": {
-    "@types/node": "^22.8.1",
+    "@types/node": "^22.13.10",
     "esno": "^4.8.0",
-    "vite": "^5.4.10",
-    "vite-plugin-dts": "^4.3.0"
+    "vite": "^6.2.1",
+    "vite-plugin-dts": "^4.5.3"
+  },
+  "author": {
+    "name": "当时只道是寻常",
+    "url": "https://github.com/Ace627",
+    "email": "1207588603@qq.com"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/fnbox.es.js",
+      "require": "./dist/fnbox.cjs.js"
+    }
+  },
   "repository": {
     "type": "github",
-    "url": "https://github.com/Ace627/fnbox.git"
+    "url": "https://github.com/Ace627/fnbox"
   },
   "bugs": {
-    "url": "https://github.com/Ace627/fnbox.git/issues",
+    "url": "https://github.com/Ace627/fnbox/issues",
     "email": "1207588603@qq.com"
   },
   "files": [
@@ -35,7 +45,6 @@
   ],
   "keywords": [
     "TypeScript",
-    "Validate",
-    "Download"
+    "校验函数"
   ]
 }
