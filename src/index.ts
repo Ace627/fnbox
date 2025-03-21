@@ -1,3 +1,4 @@
+export { to } from './helper/to'
 export { reverseString } from './string/reverseString'
 export { isArray } from './validate/isArray'
 export { isDate } from './validate/isDate'
