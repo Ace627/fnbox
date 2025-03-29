@@ -1,3 +1,5 @@
+export { linkDownload } from './browser/linkDownload'
+export { sleep } from './helper/sleep'
 export { to } from './helper/to'
 export { reverseString } from './string/reverseString'
 export { isArray } from './validate/isArray'
