@@ -8,7 +8,7 @@ module.exports = {
   /** 箭头函数仅有一个参数时，参数是否添加括号 */
   arrowParens: 'always',
   /** 每行代码的长度限制 */
-  printWidth: 180,
+  printWidth: 220,
   /** 使用单引号而不是双引号 */
   singleQuote: true,
   /** 在所有代码语句的末尾添加分号 */
@@ -23,4 +23,4 @@ module.exports = {
   vueIndentScriptAndStyle: false,
   /** 允许 Prettier 格式化 `node_modules` 中的文件 */
   withNodeModules: false,
-};
+}

@@ -1,9 +1,13 @@
 /**
- * 反转给定的字符串
- * @param {string} str - 要反转的字符串
- * @returns {string} - 反转后的字符串
+ * 反转字符串
+ * @param value 要反转的字符串
+ * @returns 反转后的字符串
+ * @example
+ * reverseString('hello') // => 'olleh'
+ * reverseString('abc123') // => '321cba'
+ * reverseString('') // => ''
  */
-export function reverseString(str: string): string {
-  if (typeof str !== 'string') throw new Error(`参数错误，必须是 String 类型`)
-  return str.split('').reverse().join('')
+export function reverseString(value: string): string {
+  if (value.length === 0) return ''
+  return value.split('').reverse().join('')
 }

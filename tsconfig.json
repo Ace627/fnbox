@@ -1,14 +1,23 @@
 {
   "compilerOptions": {
+    // 设定编译后的 JavaScript 文件使用的模块化方案
     "target": "ESNext",
+    // 设定编译后的 JavaScript 文件的 ECMAScript 目标版本
     "module": "ESNext",
-    "declaration": true, // 生成 .d.ts 文件
-    "outDir": "dist", // 输出目录
-    "strict": true,
-    "moduleResolution": "node", // 确保解析 CommonJS 和 ESM
+    // 模块加载兼容模式,可以使用 import from 语法导入 commonJS 模块
     "esModuleInterop": true,
+    // 生成相应的 .d.ts 文件，用于类型声明
+    "declaration": true,
+    // 指定编译输出目录
+    "outDir": "dist",
+    "strict": true,
+    // 确保解析 CommonJS 和 ESM
+    "moduleResolution": "node",
+    // 跳过对声明文件（.d.ts）的类型检查，提高编译性能
     "skipLibCheck": true,
+    // 移除编译后文件中的注释
     "removeComments": false,
+    // 强制文件名称大小写一致，避免在不区分大小写的文件系统中出现问题
     "forceConsistentCasingInFileNames": true,
     // 解析非相对模块名的基准目录
     "baseUrl": "./",
