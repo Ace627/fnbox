@@ -1,13 +1,17 @@
 export { sleep } from './common/sleep'
 // 常量
-export { TimeUnit } from './constant/TimeUnit'
+export * from './enums/constant'
+export { TimeUnit } from './enums/time-unit.enum.ts'
+export { HttpStatue } from './enums/http-status.enum'
 // 字符串
 export { reverseString } from './string/reverseString'
 // 数组
 export { unique } from './array/unique'
+export { uniqueBy } from './array/uniqueBy'
 export { first } from './array/first'
 export { last } from './array/last'
 // 校验
+export { isLength } from './validate/isLength'
 export { isNil } from './validate/isNil'
 export { isEmpty } from './validate/isEmpty'
 export { isNull } from './validate/isNull'

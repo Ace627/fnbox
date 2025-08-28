@@ -1,9 +1,12 @@
 import { isMap } from './isMap'
 import { isNil } from './isNil'
 import { isSet } from './isSet'
+import { isDate } from './isDate'
 import { isArray } from './isArray'
 import { isNumber } from './isNumber'
 import { isString } from './isString'
+import { isSymbol } from './isSymbol'
+import { isFunction } from './isFunction'
 import { isPlainObject } from './isPlainObject'
 import { isEmptyObject } from './isEmptyObject'
 
@@ -32,8 +35,10 @@ import { isEmptyObject } from './isEmptyObject'
  */
 export function isEmpty(value: any): boolean {
   if (isNil(value)) return true
+  if (isDate(value)) return Number.isNaN(value.getTime())
   if (isString(value)) return value.length === 0
   if (isNumber(value)) return Number.isNaN(value) // 仅将 NaN 视为空，不将任何数字视为空
+  if (isFunction(value) || isSymbol(value)) return false // 函数或 Symbol 始终视为非空
   if (isPlainObject(value)) return isEmptyObject(value)
   if (isArray(value)) return value.length === 0
   if (isMap(value) || isSet(value)) return value.size === 0
