@@ -9,6 +9,8 @@ export { TimeUnit } from './enums/time-unit.enum.ts'
 export { HttpStatue } from './enums/http-status.enum'
 // 字符串
 export { reverseString } from './string/reverseString'
+// 对象
+export { get } from './object/get'
 // 数组
 export { unique } from './array/unique'
 export { uniqueBy } from './array/uniqueBy'
