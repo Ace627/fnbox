@@ -1,38 +1,6 @@
-## 校验
+## 使用说明
 
-```ts
-export { sleep } from './common/sleep'
-// 常量
-export { TimeUnit } from './constant/TimeUnit'
-// 字符串
-export { reverseString } from './string/reverseString'
-// 数组
-export { unique } from './array/unique'
-export { first } from './array/first'
-export { last } from './array/last'
-// 校验
-export { isNil } from './validate/isNil'
-export { isEmpty } from './validate/isEmpty'
-export { isNull } from './validate/isNull'
-export { isUndefined } from './validate/isUndefined'
-export { isBoolean } from './validate/isBoolean'
-export { isDate } from './validate/isDate'
-export { isSet } from './validate/isSet'
-export { isMap } from './validate/isMap'
-export { isWeakMap } from './validate/isWeakMap'
-export { isSymbol } from './validate/isSymbol'
-export { isString } from './validate/isString'
-export { isNumber } from './validate/isNumber'
-export { isInteger } from './validate/isInteger'
-export { isFloat } from './validate/isFloat'
-export { isStringNumber } from './validate/isStringNumber'
-export { isEmptyObject } from './validate/isEmptyObject'
-export { isPlainObject } from './validate/isPlainObject'
-export { isObjectLike } from './validate/isObjectLike'
-export { isArray } from './validate/isArray'
-export { isEmptyArray } from './validate/isEmptyArray'
-export { isFunction } from './validate/isFunction'
-```
+- 所有方法名都在 `src/index.ts` 可查到
 
 ## 参考文献
 

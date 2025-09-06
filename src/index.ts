@@ -2,6 +2,7 @@ export { sleep } from './common/sleep'
 export { deepClone } from './common/deepClone'
 // 常量
 export * from './enums/constant'
+export { MediaType } from './enums/media-type.enum'
 export { TimeUnit } from './enums/time-unit.enum.ts'
 export { HttpStatue } from './enums/http-status.enum'
 // 字符串
