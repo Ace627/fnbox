@@ -1,5 +1,7 @@
 export { sleep } from './common/sleep'
 export { deepClone } from './common/deepClone'
+export { debounce } from './common/debounce'
+export { throttle } from './common/throttle'
 // 常量
 export * from './enums/constant'
 export { MediaType } from './enums/media-type.enum'
