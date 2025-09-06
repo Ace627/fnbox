@@ -7,5 +7,5 @@ import { isObjectLike } from './isObjectLike'
  * @returns {boolean} - 如果值是有效数字，返回 true；否则返回 false
  */
 export function isNumber(value: unknown): value is number {
-  return typeof value == 'number' || (isObjectLike(value) && getTag(value) === '[object String]')
+  return (typeof value === 'number' && !Number.isNaN(value)) || (isObjectLike(value) && getTag(value) === '[object Number]')
 }

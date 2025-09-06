@@ -1,5 +1,4 @@
 import { isMap } from './isMap'
-import { isNil } from './isNil'
 import { isSet } from './isSet'
 import { isDate } from './isDate'
 import { isArray } from './isArray'
@@ -34,10 +33,11 @@ import { isEmptyObject } from './isEmptyObject'
  * isEmpty(true) // => false（补充：明确布尔值非空）
  */
 export function isEmpty(value: any): boolean {
-  if (isNil(value)) return true
+  if (value === true || value === false) return false
+  if (value === null || value === undefined) return true
   if (isDate(value)) return Number.isNaN(value.getTime())
   if (isString(value)) return value.length === 0
-  if (isNumber(value)) return Number.isNaN(value) // 仅将 NaN 视为空，不将任何数字视为空
+  if (isNumber(value)) return false
   if (isFunction(value) || isSymbol(value)) return false // 函数或 Symbol 始终视为非空
   if (isPlainObject(value)) return isEmptyObject(value)
   if (isArray(value)) return value.length === 0

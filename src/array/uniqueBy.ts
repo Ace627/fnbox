@@ -1,6 +1,3 @@
-import { isArray } from '@/validate/isArray'
-import { isFunction } from '@/validate/isFunction'
-
 /**
  * 创建一个去重后的数组副本，使用迭代器生成的值进行比较
  * 与 lodash uniqueBy 行为完全一致

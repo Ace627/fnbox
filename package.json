@@ -1,7 +1,7 @@
 {
-  "name": "casic-box",
+  "name": "fnbox",
   "version": "1.0.0",
-  "description": "casic-box 是一个一致性、模块化、高性能的 JavaScript 实用工具库",
+  "description": "fnbox 是一个一致性、模块化、高性能的 JavaScript 实用工具库",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -10,7 +10,6 @@
     "build": "vite build"
   },
   "keywords": [],
-  "author": "当时只道是寻常",
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
@@ -23,6 +22,22 @@
       "import": "./dist/index.es.js",
       "require": "./dist/index.cjs.js"
     }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "author": {
+    "name": "当时只道是寻常",
+    "url": "https://github.com/Ace627",
+    "email": "1207588603@qq.com"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Ace627/fnbox"
+  },
+  "bugs": {
+    "url": "https://github.com/Ace627/fnbox/issues",
+    "email": "1207588603@qq.com"
   },
   "files": [
     "dist",
