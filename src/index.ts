@@ -1,4 +1,5 @@
 export { sleep } from './common/sleep'
+export { tryit } from './common/tryit'
 export { deepClone } from './common/deepClone'
 export { debounce } from './common/debounce'
 export { throttle } from './common/throttle'
