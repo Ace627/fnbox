@@ -8,9 +8,12 @@ export { MediaType } from './enums/media-type.enum'
 export { TimeUnit } from './enums/time-unit.enum.ts'
 export { HttpStatue } from './enums/http-status.enum'
 // 字符串
+export { capitalize } from './string/capitalize'
 export { reverseString } from './string/reverseString'
 // 对象
 export { get } from './object/get'
+export { pick } from './object/pick'
+export { omit } from './object/omit'
 // 数组
 export { unique } from './array/unique'
 export { uniqueBy } from './array/uniqueBy'
@@ -44,3 +47,4 @@ export { isObjectLike } from './validate/isObjectLike'
 export { isArray } from './validate/isArray'
 export { isEmptyArray } from './validate/isEmptyArray'
 export { isFunction } from './validate/isFunction'
+export { isPromise } from './validate/isPromise'
