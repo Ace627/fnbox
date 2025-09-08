@@ -21,6 +21,7 @@ export { uniqueBy } from './array/uniqueBy'
 export { first } from './array/first'
 export { last } from './array/last'
 // 随机
+export { random } from './random/random'
 export { randomIndex } from './random/randomIndex'
 // 校验
 export { isLength } from './validate/isLength'
