@@ -6,11 +6,8 @@
  * @returns 包装后的防抖函数，与原函数参数和this类型一致
  */
 
-/** 任意类型的 Function */
-type AnyFunction = (...args: any[]) => any
-
 /** 表示防抖后的函数类型 */
-type DebouncedFunction<T extends AnyFunction> = (...args: Parameters<T>) => ReturnType<T>
+type DebouncedFunction<T extends (...args: any[]) => any> = (...args: Parameters<T>) => ReturnType<T>
 
 interface DebounceOptions {
   immediate?: boolean
@@ -23,7 +20,7 @@ interface DebounceOptions {
  * @param {Boolean} immediate 是否立即执行
  * @returns {Function} 防抖后的函数
  */
-export function debounce<T extends AnyFunction>(callback: T, delay: number, options: DebounceOptions = {}) {
+export function debounce<T extends (...args: any[]) => any>(callback: T, delay: number, options: DebounceOptions = {}) {
   const { immediate = false } = options
 
   // 通过闭包缓存一个定时器 id

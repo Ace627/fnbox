@@ -1,3 +1,7 @@
+import pkg from '../package.json'
+
+export const version = pkg.version
+
 export { sleep } from './common/sleep'
 export { tryit } from './common/tryit'
 export { deepClone } from './common/deepClone'
@@ -24,6 +28,7 @@ export { last } from './array/last'
 export { random } from './random/random'
 export { randomIndex } from './random/randomIndex'
 // 校验
+export { isBlob } from './validate/isBlob'
 export { isLength } from './validate/isLength'
 export { isRegExp } from './validate/isRegExp'
 export { isNil } from './validate/isNil'

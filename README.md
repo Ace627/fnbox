@@ -1,9 +1,7 @@
 ## 安装
 
 ```bash
-npm i fnbox
-yarn add fnbox
-pnpm i fnbox
+npm i fnbox | yarn add fnbox | pnpm i fnbox
 ```
 
 ## 使用案例
@@ -16,6 +14,7 @@ import { isStringNumber, sleep, randomIndex, deepClone } from 'fnbox'
 
 - 所有方法名都在 [`src/index.ts`](https://github.com/Ace627/fnbox/blob/master/src/index.ts) 可查到
 - 所有方法均为 `TypeScript` 实现，提供了完善的类型提示
+- 兼容环境目前基本上只考虑 `ES6+`
 - 所有源码都在仓库中，欢迎使用学习与提建议，不断完善中
 
 ## 参考文献

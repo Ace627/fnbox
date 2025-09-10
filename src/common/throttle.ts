@@ -1,7 +1,5 @@
-/** 任意类型的 Function */
-type AnyFunction = (...args: any[]) => any
 /** 表示节流后的函数类型 */
-type ThrottledFunction<T extends AnyFunction> = T
+type ThrottledFunction<T extends (...args: any[]) => any> = T
 
 /**
  * 创建节流函数
@@ -9,7 +7,7 @@ type ThrottledFunction<T extends AnyFunction> = T
  * @param {Number} delay 节流延时
  * @returns {Function} 节流后的函数
  */
-export function throttle<T extends AnyFunction>(callback: T, delay: number) {
+export function throttle<T extends (...args: any[]) => any>(callback: T, delay: number) {
   let lastExecTime = Date.now()
   const _throttle = function (this: ThisParameterType<T>, ...args: Parameters<T>) {
     const now = Date.now()

@@ -10,6 +10,8 @@
     "declaration": true,
     // 指定编译输出目录
     "outDir": "dist",
+    // 是否允许引入 JSON 文件
+    "resolveJsonModule": true,
     "strict": true,
     // 确保解析 CommonJS 和 ESM
     "moduleResolution": "node",
@@ -27,6 +29,6 @@
       "#/*": ["types/*"]
     }
   },
-  "include": ["src/**/*.ts", "types/**/*.d.ts"], // 指定包含的文件
+  "include": ["src/**/*.ts"], // 指定包含的文件
   "exclude": ["node_modules"]
 }
