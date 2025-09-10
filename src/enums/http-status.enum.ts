@@ -1,4 +1,4 @@
-export const HttpStatue = Object.freeze({
+export const HttpStatus = Object.freeze({
   CONTINUE: 100,
   SWITCHING_PROTOCOLS: 101,
   PROCESSING: 102,

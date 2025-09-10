@@ -10,8 +10,8 @@ export { throttle } from './common/throttle'
 // 常量
 export * from './enums/constant'
 export { MediaType } from './enums/media-type.enum'
-export { TimeUnit } from './enums/time-unit.enum.ts'
-export { HttpStatue } from './enums/http-status.enum'
+export { TimeUnit } from './enums/time-unit.enum'
+export { HttpStatus } from './enums/http-status.enum'
 // 字符串
 export { capitalize } from './string/capitalize'
 export { reverseString } from './string/reverseString'
