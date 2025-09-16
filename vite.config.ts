@@ -33,6 +33,7 @@ export default defineConfig({
       // fileName: (format) => `${pkg.name}.${format}.js`, // 打包后的文件名格式
       fileName: (format) => `index.${format}.js`, // 打包后的文件名格式
     },
+
     sourcemap: false,
   },
 })

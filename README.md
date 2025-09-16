@@ -8,6 +8,8 @@ npm i fnbox | yarn add fnbox | pnpm i fnbox
 
 ```ts
 import { isStringNumber, sleep, randomIndex, deepClone } from 'fnbox'
+// 浏览器环境可用
+import { linkDownload } from 'fnbox'
 ```
 
 ## 注意事项

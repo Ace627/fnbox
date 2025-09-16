@@ -12,6 +12,8 @@ export * from './enums/constant'
 export { MediaType } from './enums/media-type.enum'
 export { TimeUnit } from './enums/time-unit.enum'
 export { HttpStatus } from './enums/http-status.enum'
+// 浏览器方法
+export { linkDownload } from './browser/linkDownload'
 // 字符串
 export { capitalize } from './string/capitalize'
 export { reverseString } from './string/reverseString'
@@ -26,10 +28,11 @@ export { first } from './array/first'
 export { last } from './array/last'
 // 随机
 export { random } from './random/random'
+export { randomBoolean } from './random/randomBoolean'
 export { randomIndex } from './random/randomIndex'
 // 校验
 export { isBlob } from './validate/isBlob'
-export { isLength } from './validate/isLength'
+export { isBrowser } from './validate/isBrowser'
 export { isRegExp } from './validate/isRegExp'
 export { isNil } from './validate/isNil'
 export { isEmpty } from './validate/isEmpty'
