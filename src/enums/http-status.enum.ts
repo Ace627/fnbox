@@ -1,4 +1,4 @@
-export const HttpStatus = Object.freeze({
+export const HttpStatus = {
   CONTINUE: 100,
   SWITCHING_PROTOCOLS: 101,
   PROCESSING: 102,
@@ -54,4 +54,4 @@ export const HttpStatus = Object.freeze({
   HTTP_VERSION_NOT_SUPPORTED: 505,
   INSUFFICIENT_STORAGE: 507,
   LOOP_DETECTED: 508,
-})
+} as const

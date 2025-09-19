@@ -3,7 +3,7 @@
  * 所有值均表示对应时间单位包含的秒数，便于时间计算
  * 注意：月、季、年等采用平均天数计算（月=30天，年=365天），非精确历法
  */
-export const TimeUnit = Object.freeze({
+export const TimeUnit = {
   /** 一秒 */
   SECOND: 1,
 
@@ -42,4 +42,4 @@ export const TimeUnit = Object.freeze({
 
   /** 半年 按六个月计算 */
   HALF_YEAR: 180 * 24 * 60 * 60,
-})
+} as const

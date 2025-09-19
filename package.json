@@ -1,6 +1,6 @@
 {
   "name": "fnbox",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "fnbox 是一个一致性、模块化、高性能的 JavaScript 实用工具库",
   "type": "module",
   "main": "dist/index.cjs.js",

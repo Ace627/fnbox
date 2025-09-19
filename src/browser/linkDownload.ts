@@ -2,7 +2,7 @@ import { isBlob } from '@/validate/isBlob'
 import { isBrowser } from '@/validate/isBrowser'
 
 /**
- * 通过创建隐藏的a标签实现文件下载功能
+ * 通过创建隐藏的 a 标签实现文件下载功能
  * 该函数支持两种下载源：URL 字符串或 Blob 对象，会自动处理不同类型的资源
  * 注意：此函数仅能在浏览器环境中使用，在 Node.js 等非浏览器环境中会抛出错误
  * @param {string | Blob} fileURL - 下载资源的 URL 字符串或 Blob 对象
@@ -23,9 +23,12 @@ export function linkDownload(fileURL: string | Blob, fileName?: string): void {
   a.style.display = 'none'
 
   // 根据资源类型设置 href 属性
-  // 如果是 Blob 对象，使用 URL.createObjectURL 创建临时 URL
-  // 否则直接使用提供的 URL 字符串
+  // 如果是 Blob 对象，使用 URL.createObjectURL 创建临时 URL，否则直接使用提供的 URL 字符串
   a.href = isBlob(fileURL) ? URL.createObjectURL(fileURL) : fileURL
+  a.rel = 'noopener noreferrer'
+
+  // 移除键盘焦点，但仍可被屏幕阅读器识别
+  a.tabIndex = -1
 
   // 设置下载文件名，未提供则使用时间戳
   a.download = fileName ? fileName : `${Date.now()}`

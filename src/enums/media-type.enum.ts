@@ -2,7 +2,7 @@
  * 媒体类型（MIME 类型）常量定义，参考 Java 的 MediaType 设计
  * 包含常见的 HTTP 请求/响应内容类型，区分带 UTF-8 编码和不带编码的版本
  */
-export const MediaType = Object.freeze({
+export const MediaType = {
   /** 纯文本类型 */
   TEXT_PLAIN: 'text/plain',
   /** 带 UTF-8 编码的纯文本类型 */
@@ -81,4 +81,4 @@ export const MediaType = Object.freeze({
   APPLICATION_PROBLEM_XML: 'application/problem+xml',
   /** 带 UTF-8 编码的问题详情 XML 类型 */
   APPLICATION_PROBLEM_XML_UTF8: 'application/problem+xml;charset=UTF-8',
-})
+} as const
