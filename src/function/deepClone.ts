@@ -4,6 +4,13 @@ import { isDate } from '../validate/isDate'
 import { isArray } from '../validate/isArray'
 import { isRegExp } from '../validate/isRegExp'
 
+/**
+ * 深拷贝一个值，支持多种数据类型并处理循环引用
+ * @template T - 源值的类型，决定返回值的类型
+ * @param {T} source - 要深拷贝的值，可以是任何数据类型
+ * @param {Map<object, any>} [map=new Map()] - 用于处理循环引用的映射表，记录已拷贝的对象，避免无限递归（内部使用，外部调用通常无需传入）
+ * @returns {T} 源值的深拷贝副本，与源值具有相同的类型和结构，但引用完全独立
+ */
 export function deepClone<T>(source: T, map = new Map<object, any>()): T {
   // 处理 null 和 undefined
   if (source === null || source === undefined) return source

@@ -7,7 +7,6 @@ import { isString } from './isString'
 import { isSymbol } from './isSymbol'
 import { isFunction } from './isFunction'
 import { isPlainObject } from './isPlainObject'
-import { isEmptyObject } from './isEmptyObject'
 
 /**
  * 判断给定的值是否为空
@@ -39,7 +38,7 @@ export function isEmpty(value: any): boolean {
   if (isString(value)) return value.length === 0
   if (isNumber(value)) return false
   if (isFunction(value) || isSymbol(value)) return false // 函数或 Symbol 始终视为非空
-  if (isPlainObject(value)) return isEmptyObject(value)
+  if (isPlainObject(value)) for (const key in value) if (Object.prototype.hasOwnProperty.call(value, key)) return false
   if (isArray(value)) return value.length === 0
   if (isMap(value) || isSet(value)) return value.size === 0
   return false
